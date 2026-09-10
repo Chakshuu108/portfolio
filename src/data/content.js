@@ -60,7 +60,7 @@ export const PROJECTS = [
     description:
       'A multi-agent system that watches patient trends across sessions, flags anomalies in real time, and explains its reasoning instead of hiding it. Symptom NLP feeds a trend-analysis agent, which feeds a report generator clinicians can actually read.',
     stack: ['Multi-Agent Systems', 'LangChain', 'LLMs', 'Explainable AI', 'Streamlit'],
-    demo: 'https://medicure.streamlit.app',
+    demo: 'https://medicure-ai-1-to7h.onrender.com/',
     accent: 'coral',
   },
   {
@@ -70,7 +70,7 @@ export const PROJECTS = [
     description:
       'Combines historical sales with live customer-sentiment analysis (scraping + NLP + topic modeling) to forecast demand up to 90 days out, with confidence intervals, a BI dashboard, and automated PDF reporting.',
     stack: ['XGBoost', 'NLP', 'Sentiment Analysis', 'BI Dashboards', 'Pandas'],
-    demo: 'https://trendify.streamlit.app',
+    demo: 'https://trendyfire.streamlit.app/',
     accent: 'violet',
   },
   {
