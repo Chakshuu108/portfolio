@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+html {
+  background: #0d0a1c;
+}
+
+body {
+  background: #0d0a1c;
+  color: #F3F1EC;
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #FF6B57;
+  color: #08080a;
+}
+
+/* thin custom scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #08080a; }
+::-webkit-scrollbar-thumb { background: #232329; border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: #33333b; }
+
+/* dotted grid backdrop, n8n-style */
+.bg-grid {
+  background-image: radial-gradient(rgba(255,255,255,0.07) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+.bg-grid-fade {
+  mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, black 40%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, black 40%, transparent 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #FF6B57 0%, #C15FA8 45%, #A379F2 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glow-coral {
+  box-shadow: 0 0 0 1px rgba(255,107,87,0.25), 0 8px 40px -12px rgba(255,107,87,0.4);
+}
+
+.panel-border {
+  border: 1px solid rgba(255,255,255,0.09);
+}
+
+.noise-panel {
+  background:
+    radial-gradient(120% 140% at 10% 0%, rgba(255,107,87,0.09), transparent 55%),
+    radial-gradient(120% 140% at 100% 20%, rgba(163,121,242,0.16), transparent 55%),
+    #171331;
+}
+
+/* --- marquee --- */
+.marquee-row {
+  display: flex;
+  gap: 1.1rem;
+  width: max-content;
+}
+
+.marquee-track-left {
+  animation: scroll-left 46s linear infinite;
+}
+.marquee-track-right {
+  animation: scroll-right 46s linear infinite;
+}
+.marquee-wrap:hover .marquee-track-left,
+.marquee-wrap:hover .marquee-track-right {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes scroll-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+/* pill nav link underline-free hover */
+.nav-pill {
+  transition: color .2s ease, background-color .2s ease;
+}
+
+.badge-dot {
+  box-shadow: 0 0 0 3px rgba(61,217,184,0.15);
+}
+
+/* --- ambient background animation --- */
+.bg-grid-pulse {
+  animation: gridPulse 8s ease-in-out infinite;
+}
+@keyframes gridPulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.03); }
+}
+
+.blob-float-1 { animation: blobFloat1 16s ease-in-out infinite; }
+.blob-float-2 { animation: blobFloat2 20s ease-in-out infinite; }
+.blob-float-3 { animation: blobFloat3 18s ease-in-out infinite; }
+.blob-float-4 { animation: blobFloat4 22s ease-in-out infinite; }
+.blob-float-5 { animation: blobFloat5 26s ease-in-out infinite; }
+
+@keyframes blobFloat1 {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.9; }
+  33% { transform: translate(90px, -70px) scale(1.2); opacity: 1; }
+  66% { transform: translate(-40px, 40px) scale(0.9); opacity: 0.75; }
+}
+@keyframes blobFloat2 {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.85; }
+  50% { transform: translate(-90px, 60px) scale(0.85); opacity: 1; }
+}
+@keyframes blobFloat3 {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.8; }
+  40% { transform: translate(60px, 80px) scale(1.15); opacity: 1; }
+  75% { transform: translate(-50px, -30px) scale(0.95); opacity: 0.7; }
+}
+@keyframes blobFloat4 {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.85; }
+  50% { transform: translate(-80px, -60px) scale(1.18); opacity: 1; }
+}
+@keyframes blobFloat5 {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+  50% { transform: translate(-50%, -50%) translate(50px, 50px) scale(1.3); opacity: 0.9; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-grid-pulse, .blob-float-1, .blob-float-2, .blob-float-3, .blob-float-4, .blob-float-5,
+  .marquee-track-left, .marquee-track-right {
+    animation: none !important;
+  }
+}
