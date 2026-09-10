@@ -10,6 +10,7 @@ import Capabilities from '@/components/Capabilities';
 import Timeline from '@/components/Timeline';
 import CTAContact from '@/components/CTAContact';
 import Footer from '@/components/Footer';
+import AIAssistant from '@/components/AIAssistant';
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <Timeline />
       <CTAContact />
       <Footer />
+      <AIAssistant />
     </main>
   );
 }
