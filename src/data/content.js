@@ -59,7 +59,7 @@ export const PROJECTS = [
     period: 'Feb 2026 – Mar 2026',
     description:
       'A multi-agent system that watches patient trends across sessions, flags anomalies in real time, and explains its reasoning instead of hiding it. Symptom NLP feeds a trend-analysis agent, which feeds a report generator clinicians can actually read.',
-    stack: ['Multi-Agent Systems', 'LangChain', 'LLMs', 'Explainable AI', 'Streamlit'],
+    stack: ['Multi-Agent Systems', 'LangChain', 'LangGraph' , 'LLMs', 'Explainable AI', 'Streamlit'],
     demo: 'https://medicure-ai-1-to7h.onrender.com/',
     accent: 'coral',
   },
@@ -92,6 +92,16 @@ export const PROJECTS = [
     stack: ['KMP Algorithm', 'Python'],
     demo: null,
     accent: 'coral',
+  },
+  {
+    name: 'Codebase Intelligence Assistant',
+    tag: 'RAG · APIs · Vector Search · LLMs',
+    period: 'July 2026 – Aug. 2026',
+    description:
+      'An automated code intelligence and semantic search system that indexes repository files for efficient code retrieval, plus a GitHub issue triage workflow that uses vector similarity search and an LLM to analyze root causes and generate fixes — including resolving 3072-dimensional vector integration issues.',
+    stack: ['n8n', 'GitHub API', 'Gemini Embeddings', 'Qdrant', 'RAG', 'Vector Search'],
+    demo: null,
+    accent: 'violet',
   },
 ];
 
