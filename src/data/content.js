@@ -42,7 +42,7 @@ export const EXPERIENCE = {
 
 export const RESEARCH = {
   title: 'GAN-Based Watermark Removal',
-  supervisor: 'Research under Prof. Deep Maan',
+  supervisor: '',
   period: 'Aug 2025 – Present',
   status: 'Paper submitted for peer review, 2026',
   points: [
@@ -132,7 +132,7 @@ export const CAPABILITIES = [
 ];
 
 export const TIMELINE = [
-  { year: '2026', label: 'Research submission — GAN-Based Watermark Removal', sub: 'under Prof. Deep Maan' },
+  { year: '2026', label: 'Research submission — GAN-Based Watermark Removal', sub: '' },
   { year: '2025', label: 'Data Science Intern — Evoastra Ventures', sub: '89% accuracy churn pipeline' },
   { year: '2024–26', label: 'AI project portfolio', sub: 'MediCure, TrendyFire, Lane Detection, Search Engine' },
   { year: '2023', label: 'Started B.E. Computer Engineering', sub: 'Thapar Institute of Engineering and Technology' },
