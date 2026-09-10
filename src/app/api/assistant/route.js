@@ -18,7 +18,7 @@ export const runtime = 'nodejs';
 // GROQ_API_KEY must be set as an environment variable in Netlify
 // (Site settings -> Environment variables). It is never hardcoded here.
 const GROQ_API_URL = 'https://api.groq.com/openai/v1/chat/completions';
-const GROQ_MODEL = process.env.GROQ_MODEL || 'llama-3.3-70b-versatile';
+const GROQ_MODEL = process.env.GROQ_MODEL || 'openai/gpt-oss-20b';
 
 // Builds a plain-text dump of everything on the site about Chakshu, straight
 // from the same data file the UI renders from — so the assistant always
