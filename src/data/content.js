@@ -1,7 +1,7 @@
 export const PROFILE = {
   name: 'Chakshu Gupta',
   role: 'AI/ML Engineer & Researcher',
-  tagline: 'Machine learning, vision, and agents you can see, trace & trust.',
+  tagline: 'Building with AI systems that see, reason & make an impact..',
   subtag:
     'Computer Engineering student at Thapar Institute of Engineering and Technology, building machine learning, computer vision and generative AI projects from research notebook to production.',
   email: 'cgupta_be23@gmail.com',
